@@ -7,7 +7,7 @@ class Solution:
 
         stack = []
         for char in s:
-            if char in parentheses[::2]:
+            if parentheses.index(char) % 2 == 0:
                 stack.append(char)
             else:
                 if len(stack) == 0:
