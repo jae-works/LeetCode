@@ -10,7 +10,7 @@ class Solution:
             if parentheses.index(char) % 2 == 0:
                 stack.append(char)
             else:
-                if len(stack) == 0:
+                if not stack:
                     return False
                 if parentheses[parentheses.index(stack[-1])+1] != char:
                     return False
